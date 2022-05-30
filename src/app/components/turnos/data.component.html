@@ -1,0 +1,44 @@
+<h1>Pizzeria Don Lino</h1>
+<hr />
+
+<div class="row">
+  <div class="col">
+    <div class="col">
+      <h3>Horario <small></small></h3>
+      <input
+        type="time"
+        placeholder="Horario"
+        name="filterData"
+        [(ngModel)]="horaSeleccionada"
+      />
+
+      <hr />
+    </div>
+    <div>
+      <form *ngFor="let datos of data | filter: horaSeleccionada">
+        <span type="text" placeholder="Encargado" name="encargado">
+          {{ datos.encargado }}
+        </span>
+        <br />
+
+        <span type="text" placeholder="Contenido" name="contenido">
+          {{ datos.contenido }}
+        </span>
+
+        <hr />
+      </form>
+      <input
+        type="text"
+        placeholder="Escriba un numero del 1 al 3"
+        name="turnoNumero"
+        [(ngModel)]="turnoNumero"
+      />
+      <button type="submit" (click)="cambiarHorario(turnoNumero)">
+        Modo Descanso
+      </button>
+    </div>
+  </div>
+  <span>JSON</span>
+  <pre>{{ data | json }}</pre>
+</div>
+
