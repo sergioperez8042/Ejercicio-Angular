@@ -15,7 +15,7 @@
       <hr />
     </div>
     <div>
-      <form *ngFor="let datos of data | filter: horaSeleccionada">
+      <form *ngFor="let datos of dataTurnos | filter: horaSeleccionada">
         <span type="text" placeholder="Encargado" name="encargado">
           {{ datos.encargado }}
         </span>
@@ -33,12 +33,7 @@
         name="turnoNumero"
         [(ngModel)]="turnoNumero"
       />
-      <button type="submit" (click)="cambiarHorario(turnoNumero)">
-        Modo Descanso
-      </button>
+      <button type="submit" (click)="cambiarHorario()">Modo Descanso</button>
     </div>
   </div>
-  <span>JSON</span>
-  <pre>{{ data | json }}</pre>
 </div>
-

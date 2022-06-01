@@ -1,4 +1,4 @@
-export interface HorarioRango {
+export interface IHorarioRango {
   horarioMin: number;
   horarioMax: number;
 }
@@ -6,12 +6,12 @@ export enum GrupoTipo {
   FIJO = "FIJO",
   DINAMICO = "DINAMICO",
 }
-export interface DataT {
-  results: TurnoGrupo[]; //cambiar nombre
+export interface IData {
+  results: ITurnoGrupo[];
 }
 
-export interface TurnoGrupo {
-  horario: HorarioRango;
+export interface ITurnoGrupo {
+  horario: IHorarioRango;
   encargado: string;
   contenido: string;
   activo: boolean;
