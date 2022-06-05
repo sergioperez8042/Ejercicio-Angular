@@ -16,4 +16,5 @@ export interface ITurnoGrupo {
   contenido: string;
   activo: boolean;
   tipo: GrupoTipo;
+  
 }

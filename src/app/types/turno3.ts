@@ -1,19 +1,19 @@
-import {ITurnoGrupo,GrupoTipo,IHorarioRango} from "../interfaces/data.interface";
+import {
+  ITurnoGrupo,
+  GrupoTipo,
+  IHorarioRango,
+} from "../interfaces/data.interface";
+import { TurnoBase } from "./turno";
 
-export class Turno3 implements ITurnoGrupo {
-  horario: IHorarioRango;
-  encargado: string;
-  contenido: string;
-  activo: boolean;
-  tipo: GrupoTipo;
-
+export class Turno3 extends TurnoBase {
   constructor() {
-    this.horario = {
-      horarioMin: 0,
-      horarioMax: 759,
-    };
+    super();
+    this.horario.horarioMin = 0;
+    this.horario.horarioMax = 759;
+
     this.encargado = "Cristian Benvenuto";
-    this.contenido = "Las pizzas salen tostadas y la salsa queda sin amargor ni acidez";
+    this.contenido =
+      "Las pizzas salen tostadas y la salsa queda sin amargor ni acidez";
     this.activo = true;
     this.tipo = GrupoTipo.FIJO;
   }

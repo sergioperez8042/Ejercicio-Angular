@@ -3,24 +3,16 @@ import {
   GrupoTipo,
   IHorarioRango,
 } from "../interfaces/data.interface";
+import { TurnoBase } from "./turno";
 
-export class Turno2 implements ITurnoGrupo {
-  horario: IHorarioRango;
-  encargado: string;
-  contenido: string;
-  activo: boolean;
-  tipo: GrupoTipo;
-
+export class Turno2 extends TurnoBase {
   constructor() {
-    this.horario = {
-      horarioMin: 1600,
-      horarioMax: 2359,
-    };
-    this.encargado =  "Alejandro Perez";
+    super();
+    this.horario.horarioMin = 1600;
+    this.horario.horarioMax = 2359;
+    this.encargado = "Alejandro Pérez";
     this.contenido = "Las pizzas salen con orégano y la masa es abundante";
     this.activo = true;
     this.tipo = GrupoTipo.FIJO;
   }
 }
-
-
