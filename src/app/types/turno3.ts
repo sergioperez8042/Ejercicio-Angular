@@ -1,8 +1,4 @@
-import {
-  ITurnoGrupo,
-  GrupoTipo,
-  IHorarioRango,
-} from "../interfaces/data.interface";
+import { GrupoTipo } from "../interfaces/data.interface";
 import { TurnoBase } from "./turno";
 
 export class Turno3 extends TurnoBase {
@@ -19,8 +15,7 @@ export class Turno3 extends TurnoBase {
   }
   override obtenerTurno(): string {
     {
-      return this.tipo = GrupoTipo.FIJO;
+      return (this.tipo = GrupoTipo.FIJO);
     }
-
   }
 }

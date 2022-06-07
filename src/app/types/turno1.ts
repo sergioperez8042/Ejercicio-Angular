@@ -1,13 +1,7 @@
-import {
-  ITurnoGrupo,
-  GrupoTipo,
-  IHorarioRango,
-} from "../interfaces/data.interface";
-import { FactoryService } from "../strategies-services/factory.service";
+import { GrupoTipo } from "../interfaces/data.interface";
 import { TurnoBase } from "./turno";
 
 export class Turno1 extends TurnoBase {
-  
   constructor() {
     super();
     this.horario.horarioMin = 800;
@@ -17,9 +11,9 @@ export class Turno1 extends TurnoBase {
     this.activo = true;
     this.obtenerTurno();
   }
-  override obtenerTurno(): string { 
+  override obtenerTurno(): string {
     {
-      return this.tipo = GrupoTipo.FIJO;
+      return (this.tipo = GrupoTipo.FIJO);
     }
   }
 }
