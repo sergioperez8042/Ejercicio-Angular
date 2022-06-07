@@ -14,6 +14,12 @@ export class Turno4 extends TurnoBase {
     this.contenido = "Las pizzas quedan agridulces y bien adornadas";
 
     this.activo = false;
-    this.tipo = GrupoTipo.DINAMICO;
+    this.obtenerTurno();
+  }
+  override obtenerTurno(): string {
+    {
+      return this.tipo = GrupoTipo.DINAMICO;
+    }
+
   }
 }

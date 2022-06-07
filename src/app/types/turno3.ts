@@ -15,6 +15,12 @@ export class Turno3 extends TurnoBase {
     this.contenido =
       "Las pizzas salen tostadas y la salsa queda sin amargor ni acidez";
     this.activo = true;
-    this.tipo = GrupoTipo.FIJO;
+    this.obtenerTurno();
+  }
+  override obtenerTurno(): string {
+    {
+      return this.tipo = GrupoTipo.FIJO;
+    }
+
   }
 }

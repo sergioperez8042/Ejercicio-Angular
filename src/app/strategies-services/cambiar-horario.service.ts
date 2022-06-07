@@ -7,10 +7,10 @@ import { FactoryService } from "./factory.service";
   providedIn: "root",
 })
 export class CambiarHorarioService {
-  private _turno1: ITurnoGrupo= this.factory.createTurno(800, 1559);
-  private _turno2: ITurnoGrupo= this.factory.createTurno(1600, 2359);
-  private _turno3: ITurnoGrupo= this.factory.createTurno(0, 759);
-  private _turno4: ITurnoGrupo= this.factory.createTurno(-1, -1);
+  private _turno1: ITurnoGrupo= this.factory.createTurno(800, 1559,"FIJO");
+  private _turno2: ITurnoGrupo= this.factory.createTurno(1600, 2359,"FIJO");
+  private _turno3: ITurnoGrupo= this.factory.createTurno(0, 759,"FIJO");
+  private _turno4: ITurnoGrupo= this.factory.createTurno(-1, -1, "DINAMICO");
   private _data: ITurnoGrupo[] = [this._turno1, this._turno2, this._turno3, this._turno4];
 
   get data(): ITurnoGrupo[] {
@@ -18,7 +18,7 @@ export class CambiarHorarioService {
   }
   constructor(public factory: FactoryService) {}
 
-  cambiar(turnoACambiar: number): Boolean {
+  cambiar(turnoACambiar: number): boolean {
     let ponerTurnoEnDescanso = () => {
       const tempArray: ITurnoGrupo[] = Object.assign([], this._data);
       console.log(tempArray);

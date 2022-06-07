@@ -3,9 +3,11 @@ import {
   GrupoTipo,
   IHorarioRango,
 } from "../interfaces/data.interface";
+import { FactoryService } from "../strategies-services/factory.service";
 import { TurnoBase } from "./turno";
 
 export class Turno1 extends TurnoBase {
+  
   constructor() {
     super();
     this.horario.horarioMin = 800;
@@ -13,6 +15,11 @@ export class Turno1 extends TurnoBase {
     this.encargado = "Miguel Diaz";
     this.contenido = "Las pizzas salen con mucho queso y poca sal";
     this.activo = true;
-    this.tipo = GrupoTipo.FIJO;
+    this.obtenerTurno();
+  }
+  override obtenerTurno(): string { 
+    {
+      return this.tipo = GrupoTipo.FIJO;
+    }
   }
 }

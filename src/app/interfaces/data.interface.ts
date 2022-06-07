@@ -1,3 +1,5 @@
+import { CambiarHorarioService } from "../strategies-services/cambiar-horario.service";
+
 export interface IHorarioRango {
   horarioMin: number;
   horarioMax: number;
@@ -16,5 +18,8 @@ export interface ITurnoGrupo {
   contenido: string;
   activo: boolean;
   tipo: GrupoTipo;
-  
+  obtenerTurno(): string;
+ 
 }
+
+

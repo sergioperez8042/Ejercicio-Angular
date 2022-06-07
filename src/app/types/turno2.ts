@@ -13,6 +13,11 @@ export class Turno2 extends TurnoBase {
     this.encargado = "Alejandro Pérez";
     this.contenido = "Las pizzas salen con orégano y la masa es abundante";
     this.activo = true;
-    this.tipo = GrupoTipo.FIJO;
+    this.obtenerTurno();
+  }
+  override obtenerTurno(): string {
+    {
+      return this.tipo = GrupoTipo.FIJO;
+    }
   }
 }
