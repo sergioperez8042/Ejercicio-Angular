@@ -21,6 +21,9 @@ export class TurnoBase implements ITurnoGrupo {
     this.tipo = GrupoTipo.FIJO;
     this.obtenerTurno();
   }
+  comportarse(): void {
+    throw new Error("Method not implemented.");
+  }
   obtenerTurno(): string {
     return "";
   }

@@ -18,8 +18,12 @@ export interface ITurnoGrupo {
   contenido: string;
   activo: boolean;
   tipo: GrupoTipo;
-  obtenerTurno(): string;
- 
+ comportarse():void;
 }
+
+export interface IComportamiento {
+  mostrarComportamiento(): void;
+}
+
 
 
